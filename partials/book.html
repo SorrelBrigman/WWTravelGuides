@@ -1,0 +1,11 @@
+<h1>Guide Books</h1>
+
+
+<input type="text" placeholder="search for guide book" ng-model="searchfield">
+
+<div ng-repeat="value in books | filter : searchfield">
+  <h2>Title: {{value.title}}</h2>
+  <h4>Type of guide: {{value.type}}</h4>
+  <p>Price: {{value.price}}</p>
+
+</div>
