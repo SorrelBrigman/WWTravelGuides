@@ -9,7 +9,12 @@ const app = angular
     })
   }) //end of config
 .controller("BookCtrl", function($scope, guideFactory) {
-  $scope.books =
+  guideFactory.getGuides()
+  .then((response)=>{
+    $scope.books = response;
+    console.log($scope.books)
+  });
+
 
 }) //end of controller
 
